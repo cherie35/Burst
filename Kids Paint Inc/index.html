@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kids Paint Inc.</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <!---bootstrap 4---->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,900&display=swap" rel="stylesheet">
+</head>
+
+<!--
+    
+total: 4hrs + 5hrs + 7hrs + 7hr
+
+-->
+
+<!--gebruik gemaakt van external en inline CSS om de kode overzichtelijker te houden-->
+
+
+<body>
+    <div class="content">
+
+        <!----nav---->
+        <div id="navigation" class="container-fluid">
+            <div class="col-11 mx-auto ">
+                <div class="navbar nav">
+                    <div class="logo-wrapper col col-lg-2 col-md-4 col-xs-11">
+                        <a href="./index.html">
+                            <img src="./src/svg/logo.svg">
+                        </a>
+                    </div>
+
+                    <!--mobile nav-->
+                    <!--nav gemaakt voor kleinere viewports omdat dit er netter uitziet dan erg kleine nav links-->
+                    <div class="mobile-nav d-block d-lg-none col-12">
+                        <button class="btn form-control col-xs-12 navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-mobile" style="height: 6em; background-color: transparent;position: sticky;">
+                            &#9776;
+                        </button>
+                        <div class="collapse mobile-nav-body" id="navbar-mobile">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a class="mobile-nav-link" href="#">Entertain</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-nav-link" href="#">Educate</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-nav-link" href="#">All our products</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-nav-link" href="#">About us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--nav desktop-->
+                    <div class="navs offset-lg-1 d-none d-lg-block col-lg-9">
+                        <ul class="nav-text" style="list-style: none">
+                            <li>
+                                <a href="#" class="nav-link">
+                                    <h4>Entertain</h4>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link">
+                                    <h4>Educate</h4>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link">
+                                    <h4>All our products</h4>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link">
+                                    <h4>About us</h4>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <!---corner images-->
+        <!--in apparte dividers om het voor mij makkelijker uit elkaar te houden en beter te kunnen finetunen-->
+        <div class="container-fluid header">
+            <div class=" left-head col-6 ">
+                <img src="./src/svg/Splash green.svg ">
+            </div>
+            <div class="right-head col-6">
+                <img class="img-fluid " src="./src/svg/Splash yellow.svg ">
+            </div>
+        </div>
+
+        <!--head section-->
+        <div class="row pr-0 mx-auto">
+            <div class="col-lg-11 offset-lg-1 pr-0">
+                <div class="col-5 head-text">
+
+                    <h1 class="top-text text-yellow">
+                        Add fun,<br> add color
+                    </h1>
+                    <p class="top-text-sub">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
+                    </p>
+                </div>
+                <div class="head-image">
+                    <div class="right-top-img-holder">
+                        <img class="img-fluid" src="./src/png/paint hands girl.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container head-content">
+
+            <!----text top-->
+            <div class="row px-4" id="add-fun">
+            </div>
+            <div class='row col-lg-10 col-xs-12 info-top mx-auto'>
+                <div class="col-lg-4 col-xs-12  text-yellow">
+                    <h3 class="info-head">
+                        All Natural <img src="./src/svg/arrow-down-yellow.svg">
+                        <!--van svg's gebruik gemaakt vanwege de hogere resolutie-->
+                    </h3>
+                    <p class="info-sub">
+                        <!--classes voor onderdelen die waarschijnlijk zullen moeten worden aangepast of gestijld-->
+                        We only use organic ingredients and No Junk.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-xs-12 text-green">
+                    <h3 class="info-head">
+                        No risk <img src="./src/svg/arrow-down-green.svg">
+                    </h3>
+                    <p class="info-sub">
+                        The time with your kid is important, we make sure that time is qualitative.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-xs-12 text-pink">
+                    <h3 class="info-head">
+                        More Fun <img src="./src/svg/arrow-down-pink.svg">
+                    </h3>
+                    <p class="info-sub">
+                        You want to show your kid the world in a playful way. We curated the right games and challenges.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!---pink components-->
+        <div class="components container-fluid overflow-hidden p-0">
+            <div class="row">
+                <div class="components-bg col-12">
+                    <div class="container px-5">
+                        <span class="text-white">
+
+
+                            <h1 class="components-head">Components</h1>
+                            <p class="components-sub">
+                                <strong>Ingredients we <img src="./src/svg/heart.svg"></strong>
+                                <br> We promise to only use organic ingredients
+
+                            </p>
+                            <p class="components-sub">
+                                <strong>Ingredients we don’t like so much</strong>
+                                <br> Additives
+                                <br> Colourings
+                                <br> Flavour enhancers & flavourings
+                                <br> Preservatives
+                                <br> Artifical sweeteners
+                                <br> Starches or thickeners
+
+                            </p>
+                        </span>
+                        <button class="form-control component-button">
+                            <a href="#">
+                                <h5>All our colors</h5>
+                            </a>
+                        </button>
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+            <!---green/yellow entertain-->
+            <div class="components container-fluid green-splash-content">
+                <div class="row">
+                    <div class="col-md-3 col-sm-5 col-xl-10 d-none d-sm-block green-splash-img offset-md-9 offset-sm-7 offset-xl-2">
+                        <img class="img-fluid green-splash" src="./src/svg/splash-green-mid.svg">
+                    </div>
+                    <div class="col-12 green-splash-text">
+                        <span class="text-yellow">
+                            <!--ook heb ik afkortingen (bijv. pb-0, mx-auto) gebruikt om te voorkomen dat er (te) veel classes worden aangemaakt in main.css met maar enkele regels code-->
+                            <h1 class="components-head pb-2">Entertain</h1>
+                            <p class="components-sub py-2">
+                                The time with your kid is important, we make sure that time is qualitative.
+                            </p>
+
+                            <div class="col-8 mx-auto">
+                                <div class="card-deck entertain-cards">
+                                    <div class="card entertain">
+                                        <img class="card-img-top" src="src/png/girl-paint-face.png">
+                                        <div class="card-body">
+                                            <h4 class="entertain-sub card-title">Et nec decore putant</h4>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img class="card-img-top" src="src/png/rainbow-paint-boy.png">
+                                        <div class="card-body">
+                                            <h4 class="card-title entertain-sub">Te ridens doctus</h4>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img class="card-img-top" src="src/png/overhead-paint.png">
+                                        <div class="card-body">
+                                            <h4 class="card-title entertain-sub">Adhuc facete admodum</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="form-control fun-button mx-auto mt-5">
+                                    <a href="#">
+                                        <h5>Check all the fun</h5>
+                                    </a>
+                                </button>
+                            </div>
+                        </span>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!---purple educate-->
+            <div class="components container-fluid green-splash-content py-5">
+
+                <div class="row ">
+
+                    <div class="col-12 educate-bg ">
+                        <span class="text-white">
+                            <h1 class="components-head pb-1">Educate</h1>
+                            <p class="educate-sub col-lg-3 py-4 mx-auto">
+                                Blandit consectetuer his ex, quis oratio consul ut cum, no eos sonet antiopam. Eam
+                                discere insolens repudiare ad. </p>
+
+                            <div class="col-lg-10 mx-auto">
+                                <div class="card-deck educate-cards">
+                                    <div class="card educate-card">
+                                        <img class="circular" src="src/png/paint-tins.png">
+                                        <div class="card-body">
+                                            <h4 class="card-title entertain-sub">Te odio patrioque?</h4>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img class="circular" src="src/png/mixed-paint-colorful.png">
+                                        <div class="card-body">
+                                            <h4 class="card-title entertain-sub">Omnes elaboraret sea?</h4>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img class="circular" src="src/png/mixed-paint.png">
+                                        <div class="card-body">
+                                            <h4 class="card-title entertain-sub">Eam porro solet singulis</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="form-control teach-button mt-5 mx-auto">
+                                    <a href="#">
+                                        <h5>Teach me more</h5>
+                                    </a>
+                                </button>
+                            </div>
+                        </span>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <!---green follow-->
+            <div class="components container-fluid green-splash-content py-5">
+                <div class="row">
+                    <div class="container follow-top">
+                        <div class="col-12">
+                            <h1 class="components-head py-5" style="font-weight:700">
+                                Follow CLEMMIE
+                            </h1>
+                        </div>
+                        <div class="col-md-6 col-xl-6 col-sm-12 pb-4 follow-left">
+                            <img class="img-fluid" src="./src//png/bunny-ears-girl.png">
+                        </div>
+                        <!--meerdere col-grootes gebruikt voor beter responsive design-->
+                        <div class="col-lg-6 col-md-6 col-sm-12 follow-right">
+                            <img class="img-fluid" src="./src/png/avatar.png">
+                            <div class="col-10 mx-auto">
+                                <p class="top-text-sub">
+                                    Get to know C L E M M I E and why see why she uses Kids Paint Inc. products.
+                                </p>
+                                <p class="top-text-sub">
+                                    <!--gebruik gemaakt van span voor verschillende kleuren in 1 deel tekst-->
+                                    <span class="text-purple">@</span>mother_of_daugters
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row ">
+                    <div class="col-12 follow-bg ">
+                        <span class="text-white">
+                            <div class="col-12">
+                                <img class="img-fluid" src="./src/svg/logo.svg">
+                            </div>
+                            <div class="col-12 py-5">
+                                <p class="top-text-sub">
+                                    Dont forget to follow <span class="text-dark-green">@</span>kidspaintinc for inspiration & recipes
+                        </p>
+                    </div>
+                    <div class="container">
+                        <div class="card-deck follow-cards">
+                            <div class="card follow-card">
+                                <img class="square" src="src/png/paint-baby.png">
+                            </div>
+                            <div class="card">
+                                <img class="square" src="src/png/paint-leaf.png">
+
+                            </div>
+                            <div class="card">
+                                <img class="square" src="src/png/boy-paint.png">
+
+                            </div>
+                        </div>
+
+                        <button class="follow-button form-control mb-n5 mt-5 mx-auto">
+                                    <a href="https://www.instagram.com/explore/tags/kidspaint/?hl=en" target="blank">
+                                        <h5>Go to Instagram</h5>
+                                    </a>
+                                </button>
+                    </div>
+                    </span>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!---explore-->
+        <div class="components container-fluid green-splash-content py-5">
+            <div class="row ">
+
+                <div class="col-12" class="text-black">
+                    <div class="col-12">
+                        <h1>
+                            <b class="py-3 components-head">
+                                    Explore our range
+                                </b>
+                        </h1>
+                    </div>
+                    <div class="col-6 mx-auto">
+                        <p class="top-text-sub">
+                            Lorem ipsum dolor sit amet, sonet gloriatur eos ea, nam te probo liberavisse, est cu intellegat reprimique.
+                        </p>
+                    </div>
+                    <div class="container">
+                        <div class="card-deck explore-cards">
+
+                            <!--groen-->
+                            <div class="card explore-card">
+                                <img class="card-img-top col-12" src="src/svg/green splash product.svg">
+                                <div class="card-img-overlay">
+                                    <h4 class="card-title">
+                                        <b class="text-green">
+                                                Water based
+                                            </b>
+                                    </h4>
+                                    <img class="img-fluid" src="./src/png/Product.png">
+                                    <p class="top-text-sub">
+                                        Lorem ipsum dolor sit amet, sonet gloriatur eos ea, nam te probo liberavisse, est cu intellegat reprimique.
+                                    </p>
+                                    <button class="form-control follow-button mx-auto " style="background: var(--col-green)">
+                                            <a href="#">
+                                                <h5>Explore the range</h5>
+                                            </a>
+                                        </button>
+                                </div>
+                            </div>
+
+                            <!--oranje-->
+                            <div class="card explore-card">
+                                <img class="card-img-top col-12" src="src/svg/orange splash product.svg">
+                                <div class="card-img-overlay">
+                                    <h4 class="card-title">
+                                        <b class="text-orange">
+                                                Full organic
+                                            </b>
+                                    </h4>
+                                    <img class="img-fluid " src="./src/png/Product.png">
+                                    <p class="top-text-sub">
+                                        Lorem ipsum dolor sit amet, sonet gloriatur eos ea, nam te probo liberavisse, est cu intellegat reprimique.
+                                    </p>
+                                    <button class="form-control teach-button mx-auto " style="background: var(--col-orange)">
+                                            <a href="#">
+                                                <h5>Explore the range</h5>
+                                            </a>
+                                        </button>
+                                </div>
+                            </div>
+
+                            <!--paars-->
+                            <div class="card explore-card">
+                                <img class="card-img-top col-12" src="src/svg/purple splash product.svg">
+                                <div class="card-img-overlay">
+                                    <h4 class="card-title">
+                                        <b class="text-purple">
+                                                Oil Based
+                                            </b>
+                                    </h4>
+                                    <img class="img-fluid" src="./src/png/Product.png">
+                                    <p class="top-text-sub">
+                                        Lorem ipsum dolor sit amet, sonet gloriatur eos ea, nam te probo liberavisse, est cu intellegat reprimique.
+                                    </p>
+                                    <button class="form-control teach-button mx-auto ">
+                                            <a href="#">
+                                                <h5>Explore the range</h5>
+                                            </a>
+                                        </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-6 mt-5 pt-3 mx-auto">
+                            <button class="form-control explore-button  p-3 mx-auto mt-5" style="margin-top: 4em">
+                                    <a href="#">
+                                        <h5>All our foods</h5>
+                                    </a>
+                                </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="components green-splash-content pt-5">
+            <div class="col-12">
+
+                <h1 class="components-head">Discover what's new</h1>
+            </div>
+            <div class="col-xl-6 mx-auto">
+                <div>
+                    <div class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="./src/svg/Group.svg" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class=".car-img d-block w-90 mx-auto" src="./src/svg/giraffe.svg">
+                            </div>
+                        </div>
+                        <a class="carousel-control-next" href="#" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--subscribe-->
+            <div class="col-12 friends-bg mb-n5">
+                <div class="col-12">
+
+                    <h1 class="components-head">Become our friend!</h1>
+                </div>
+                <div class="col-lg-9 mx-auto">
+                    <p class="top-text-sub ">
+                        Facer invenire petentium ea has, viris integre sensibus ei nam, illum veniam ad sit. Ne per epicurei detraxit, stet putent nec ea. In eam eripuit adipisci.
+                    </p>
+
+                </div>
+
+                <div class="col-12 col d-flex py-4 justify-content-center">
+                    <div class="card  mb-3" style="max-width: 540px;">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="./src/png/kid-in-eggchair.png" class="card-img">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body text-left">
+                                    <h4>Mundi integre</h4>
+                                    <p>Lorem ipsum dolor sit amet, sonet gloriatur eos ea, nam te probo. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 mx-5" style="max-width: 540px;">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="./src/png/paintings-frames.png" class="card-img">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body text-left">
+                                    <h5 class="card-title">At duo vero</h5>
+                                    <p>Lorem ipsum dolor sit amet, sonet gloriatur eos ea, nam te probo. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="form-control follow-button mx-auto" style="width:25em">
+                        <a href="#">
+                            <h5>Subscribe to our newsletter</h5>
+                        </a>
+                    </button>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!----footer---->
+    <div class="container-fluid footer ">
+        <div class="col-xs-12 col-lg-6 col-xl-5 footer-text px-2 mx-auto ">
+            <div class="col-sm-4 col-md-4 col-lg-4 ">
+                <a href="# " class="footer-links text-decoration-none ">
+                    <p>Privacy & Cookies</p>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 ">
+                <a href="# " class="footer-links text-decoration-none ">
+                    <p>Sitemap</p>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 ">
+                <a href="#  class=" footer-links text-decoration-none ">
+                    <p>Terms & Conditions</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src=" " async defer></script>
+</body>
+
+</html>
